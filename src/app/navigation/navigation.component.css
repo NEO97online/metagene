@@ -24,8 +24,12 @@
     width: 64px;
 }
 
+.navbar-inner_right.mobile {
+
+}
+
 .navbar-inner_right .nav-links {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -44,4 +48,10 @@
 
 .nav-link:hover, .nav-link.active {
     color: rgb(91, 208, 218) !important;
+}
+
+@media only screen and (min-width: 1040px) {
+    .navbar-inner_right .nav-links {
+        display: flex;
+    }
 }
