@@ -1,0 +1,47 @@
+.navbar {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.navbar-inner {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    background-color: #fff;
+}
+
+.navbar-inner_left .logo img {
+    width: 64px;
+}
+
+.navbar-inner_right .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links .nav-link {
+    font-family: 'Gill Sans';
+    color: #300941;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 24px;
+}
+
+.nav-links .nav-link.alkeme {
+    text-transform: none;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: rgb(91, 208, 218) !important;
+}
