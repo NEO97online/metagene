@@ -2,19 +2,41 @@
   <div class="navbar-inner">
     <div class="navbar-inner_left">
       <div class="logo">
+        <ng-container *ngIf="router.url =='/'">
+          <a href="#">
+            <img src="assets/logo/metalogo.png">
+          </a>
+        </ng-container>
+        <ng-container *ngIf="router.url !='/'">
         <a routerLink="/">
           <img src="assets/logo/metalogo.png">
         </a>
+        </ng-container>
       </div>
     </div>
     <div class="navbar-inner_right">
       <div class="nav-links">
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Home</a>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  class="nav-link">Home</a>
         <a href="" class="nav-link">Services</a>
         <a href="" class="nav-link alkeme">Alkemé</a>
         <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
         <a href="" class="nav-link">META DATA</a>
         <a href="" class="nav-link">Contact</a>
+      </div>
+      <div class="mobile">
+        <div (click)="toggleMenu()" id="nav-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="mobile-nav" class="mobile-nav">
+          <a (click)="toggleMenu()" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  class="nav-link">Home</a>
+          <a href="" class="nav-link">Services</a>
+          <a href="" class="nav-link alkeme">Alkemé</a>
+          <a (click)="toggleMenu()" routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+          <a href="" class="nav-link">META DATA</a>
+          <a href="" class="nav-link">Contact</a>
       </div>
       
     </div>
