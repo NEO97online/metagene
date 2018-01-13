@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ServicesComponent } from './services/services.component';
+import { AlkemeComponent } from './alkeme/alkeme.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { NavigationComponent } from './navigation/navigation.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    NavigationComponent
+    NavigationComponent,
+    ServicesComponent,
+    AlkemeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -16,12 +16,17 @@
     </div>
     <div class="navbar-inner_right">
       <div class="nav-links">
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  class="nav-link">Home</a>
-        <a href="" class="nav-link">Services</a>
-        <a href="" class="nav-link alkeme">Alkemé</a>
+        <ng-container *ngIf="router.url =='/'">
+          <a href="#" class="nav-link">Home</a>
+        </ng-container>
+        <ng-container *ngIf="router.url !='/'">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  class="nav-link">Home</a>
+        </ng-container>
+        <a routerLink="/services" routerLinkActive="active" class="nav-link">Services</a>
+        <a routerLink="/alkeme" routerLinkActive="active" href="" class="nav-link alkeme">Alkemé</a>
         <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
         <a href="" class="nav-link">META DATA</a>
-        <a href="" class="nav-link">Contact</a>
+        <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a>
       </div>
       <div class="mobile">
         <div (click)="toggleMenu()" id="nav-icon">
@@ -31,12 +36,17 @@
         </div>
       </div>
       <div id="mobile-nav" class="mobile-nav">
-          <a (click)="toggleMenu()" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  class="nav-link">Home</a>
-          <a href="" class="nav-link">Services</a>
-          <a href="" class="nav-link alkeme">Alkemé</a>
+          <ng-container *ngIf="router.url =='/'">
+            <a (click)="toggleMenu()" href="#" class="nav-link">Home</a>
+          </ng-container>
+          <ng-container *ngIf="router.url !='/'">
+            <a (click)="toggleMenu()" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Home</a>
+          </ng-container>
+          <a (click)="toggleMenu()" routerLink="/services" routerLinkActive="active" class="nav-link">Services</a>
+          <a (click)="toggleMenu()" routerLink="/alkeme" class="nav-link alkeme">Alkemé</a>
           <a (click)="toggleMenu()" routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
-          <a href="" class="nav-link">META DATA</a>
-          <a href="" class="nav-link">Contact</a>
+          <a (click)="toggleMenu()" href="" class="nav-link">META DATA</a>
+          <a (click)="toggleMenu()" routerLink="/contact" class="nav-link">Contact</a>
       </div>
       
     </div>
