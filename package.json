@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "deploy": "ng build --prod && firebase deploy --only hosting",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
