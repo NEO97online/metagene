@@ -150,16 +150,16 @@ input, textarea {
     border: 2px solid #b0b2b3;
     color: #b0b2b3;
     font-family: 'Gill Sans';
-    padding: 24px;
+    padding: 12px;
     width: 100%;
     background-color: transparent;
     outline: 0;
     transition: all 150ms ease;
-    margin: 24px 0;
+    margin: 12px 0;
 }
 
 input::placeholder, textarea::placeholder {
-    font-size: 24px;
+    font-size: 16px;
     color: #b0b2b3;
     text-transform: uppercase;
     letter-spacing: 6px;
@@ -194,4 +194,15 @@ input:focus {
 .submit:hover {
     color: #fff;
     background-color: #6b4d8f;
+}
+
+@media only screen and (min-width: 800px) {
+    input::placeholder, textarea::placeholder {
+        font-size: 24px;
+    }
+    input, textarea {
+        font-size: 24px;
+        padding: 24px;
+        margin: 24px 0;
+    }
 }
