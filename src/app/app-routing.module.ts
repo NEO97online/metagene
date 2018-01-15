@@ -9,10 +9,12 @@ import { ServicesComponent } from './services/services.component';
 import { AlkemeComponent } from './alkeme/alkeme.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageComponent } from './page/page.component';
+import { PageDetailComponent } from './page/page-detail/page-detail.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, data: { state: 'home' } },
   { path: 'page', component: PageComponent, data: { state: 'page' } },
+  { path: 'page/:id', component: PageDetailComponent, data: { state: 'page' } },
   { path: 'about', component: AboutComponent, data: { state: 'about' } },
   { path: 'services', component: ServicesComponent, data: { state: 'services' } },
   { path: 'alkeme', component: AlkemeComponent, data: { state: 'alkeme' } },

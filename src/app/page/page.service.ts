@@ -21,14 +21,17 @@ export class PageService {
   constructor( private firestoreService: FirestoreService, public afs: AngularFirestore ) { 
 
     this.pagesCol = this.afs.collection('pages');
-    this.pages = 
-    this.pagesCol.snapshotChanges().map(changes => {
+    this.pages = this.pagesCol.snapshotChanges().map(changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Page;
         data.id = a.payload.doc.id;
         return data;
       });
     });
+  }
+
+  getPage(id: string) {
+    return this.afs.doc<Page>(`pages/${id}`);
   }
 
   getPages() {

@@ -1,9 +1,11 @@
 <h2 style="margin-top: 150px;">Pages</h2>
 
 <ul>
-  <li *ngFor="let page of pages | async">
+  <li *ngFor="let page of pages">
     <a [routerLink]="['/page', page.id]">
-      <span>{{ page.id }}</span>{{ page.name }}
+      {{ page.template }}
+      <p>{{ page.id }}</p>
+      <p>{{ page.name }}</p>
     </a>
   </li>
 </ul>

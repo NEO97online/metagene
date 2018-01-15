@@ -14,6 +14,7 @@ import { ServicesComponent } from './services/services.component';
 import { AlkemeComponent } from './alkeme/alkeme.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageComponent } from './page/page.component';
+import { PageDetailComponent } from './page/page-detail/page-detail.component';
 
 import { PageService } from './page/page.service';
 
@@ -27,7 +28,8 @@ import { PageService } from './page/page.service';
     ServicesComponent,
     AlkemeComponent,
     ContactComponent,
-    PageComponent
+    PageComponent,
+    PageDetailComponent
   ],
   imports: [
     BrowserModule,
