@@ -165,7 +165,7 @@ input::placeholder, textarea::placeholder {
     letter-spacing: 6px;
 }
 
-input:focus {
+input:focus, textarea:focus {
     border: 2px solid #6b4d8f;
 }
 

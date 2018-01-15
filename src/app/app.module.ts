@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
+import { CoreModule } from '@core/core.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +13,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ServicesComponent } from './services/services.component';
 import { AlkemeComponent } from './alkeme/alkeme.component';
 import { ContactComponent } from './contact/contact.component';
+import { PageComponent } from './page/page.component';
 
 
 @NgModule({
@@ -22,12 +24,14 @@ import { ContactComponent } from './contact/contact.component';
     NavigationComponent,
     ServicesComponent,
     AlkemeComponent,
-    ContactComponent
+    ContactComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
