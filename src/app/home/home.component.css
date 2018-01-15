@@ -920,8 +920,6 @@
     text-transform: uppercase;
     padding: 16px;
     border: 2px solid #fff;
-    border-left: 0;
-    border-bottom: 0;
     margin: 24px 0;
     transition: all 150ms ease;
 }
