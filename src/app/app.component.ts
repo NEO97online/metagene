@@ -35,26 +35,26 @@ import { RouterModule, Routes, Router, NavigationEnd } from '@angular/router';
 export class AppComponent {
 
   constructor( private router: Router ) {
-    this.router.events.subscribe((evt) => {
-      if (window.location.hash.length > 0) {
-        return;
-      }
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-      else {
-        window.scrollTo(0, 0);
-      }
-    });
+    // this.router.events.subscribe((evt) => {
+    //   if (window.location.hash.length > 0) {
+    //     return;
+    //   }
+    //   if (!(evt instanceof NavigationEnd)) {
+    //     return;
+    //   }
+    //   else {
+    //     window.scrollTo(0, 0);
+    //   }
+    // });
    }
   
   ngOnInit() { 
-  //   this.router.events.subscribe((evt) => {
-  //     if (!(evt instanceof NavigationEnd)) {
-  //         return;
-  //     }
-  //     window.scrollTo(0, 0)
-  // });
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+  });
   }
 
 

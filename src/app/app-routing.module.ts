@@ -8,9 +8,11 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { AlkemeComponent } from './alkeme/alkeme.component';
 import { ContactComponent } from './contact/contact.component';
+import { PageComponent } from './page/page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, data: { state: 'home' } },
+  { path: 'page', component: PageComponent, data: { state: 'page' } },
   { path: 'about', component: AboutComponent, data: { state: 'about' } },
   { path: 'services', component: ServicesComponent, data: { state: 'services' } },
   { path: 'alkeme', component: AlkemeComponent, data: { state: 'alkeme' } },

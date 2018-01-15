@@ -285,6 +285,23 @@
     }
 }
 
+.action {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .action {
+        justify-content: flex-start;
+    }
+}
+
+
 /* Reiki */
 
 .reiki {
@@ -360,8 +377,6 @@
     text-transform: uppercase;
     padding: 16px;
     border: 2px solid #fff;
-    border-left: 0;
-    border-bottom: 0;
     margin: 24px 0;
     transition: all 150ms ease;
 }
@@ -493,8 +508,6 @@
     text-transform: uppercase;
     padding: 16px;
     border: 2px solid #fff;
-    border-right: 0;
-    border-bottom: 0;
     margin: 24px 0;
     transition: all 150ms ease;
 }
@@ -632,8 +645,6 @@
     text-transform: uppercase;
     padding: 16px;
     border: 2px solid #fff;
-    border-left: 0;
-    border-bottom: 0;
     margin: 24px 0;
     transition: all 150ms ease;
 }
@@ -771,8 +782,6 @@
     text-transform: uppercase;
     padding: 16px;
     border: 2px solid #fff;
-    border-right: 0;
-    border-bottom: 0;
     margin: 24px 0;
     transition: all 150ms ease;
 }

@@ -15,6 +15,8 @@ import { AlkemeComponent } from './alkeme/alkeme.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageComponent } from './page/page.component';
 
+import { PageService } from './page/page.service';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { PageComponent } from './page/page.component';
     AppRoutingModule,
     CoreModule
   ],
-  providers: [],
+  providers: [ PageService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
