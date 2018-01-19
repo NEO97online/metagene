@@ -1,0 +1,39 @@
+@import 'assets/fonts/stylesheet.css';
+
+// Body
+
+.body-container {
+    @extend %bodycontainer;
+}
+
+.body-p, .body-a, .body-li {
+    @extend %body;
+}
+
+.body-title {
+    @extend %title2;
+}
+
+.body-a {
+    font-size: 12px;
+}
+
+.body-li {
+    font-size: 14px;
+}
+
+.body-ul {
+    max-width: 900px;
+}
+
+@media only screen and (min-width: $sm) {
+    .body-container {
+        padding: 24px 80px;
+    }
+    .body-p, .body-li, .body-a {
+        font-size: 24px;
+    }
+    .body-title {
+        font-size: 32px;
+    }
+}

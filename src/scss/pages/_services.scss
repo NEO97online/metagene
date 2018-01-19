@@ -1,0 +1,215 @@
+// Wrapper
+
+.services-container {
+    @extend %page-container;
+}
+
+// Header
+
+.services-header {
+    @extend %page-header;
+}
+
+.services-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/services/services-bg-min.jpg");
+}
+
+.services-headline {
+    @extend %headline;
+    font-size: 42px;
+}
+
+@media only screen and (min-width: $sm) {
+    .services-header {
+        height: 480px;
+    }
+    .services-headline {
+        font-size: 100px;
+    }
+}
+
+// Body
+
+.body-container {
+    @extend %bodycontainer;
+}
+
+.body-p {
+    @extend %body;
+    font-size: 14px;
+}
+
+.body-title {
+    @extend %title2;
+}
+
+.body-a {
+    font-size: 12px;
+}
+
+.body-li {
+    font-size: 14px;
+}
+
+.body-ul {
+    max-width: 900px;
+}
+
+@media only screen and (min-width: $sm) {
+    .body-container {
+        padding: 24px 80px;
+    }
+    .body-p, .body-li, .body-a {
+        font-size: 24px;
+    }
+    .body-title {
+        font-size: 32px;
+    }
+}
+
+// Services
+
+.services-service {
+    margin: 64px 0;
+}
+
+.services-service-title {
+    @extend %title2;
+}
+
+.services-service-p {
+    @extend %body;
+    font-size: 12px;
+}
+
+.services-service-p, .services-service-title {
+    padding: 0;
+    margin: 0;
+    max-width: 800px;
+}
+
+@media only screen and (min-width: $sm) {
+    .services-service-p {
+        font-size: 24px;
+    }
+    .services-service-title {
+        font-size: 32px;
+    }
+}
+
+// Distributors
+
+.distributors {
+    margin: 64px 12px;
+}
+
+.distributors-logo {
+    width: 50%;
+    height: 100%;
+}
+
+.distributors-logo img {
+    width: 100%;
+}
+
+// Packages
+
+.packages-header {
+    @extend %page-subheader;
+    margin: 64px 0;
+}
+
+.packages-header-title {
+    @extend %headline;
+}
+
+@media only screen and (min-width: $sm) {
+    .packages-header-title {
+        font-size: 42px;
+    }
+}
+
+.package-row {
+    width: 100%;
+    height: 600px;
+    background-color: $purple1;
+    transition: all 200ms ease;
+}
+
+.package-row {
+    width: 100%;
+    height: 600px;
+    background-color: $purple1;
+    transition: all 200ms ease;
+    
+    .col {
+        height: 50%;
+    }
+
+    .padding {
+        padding: 0 16px;
+    }
+}
+
+@media only screen and (min-width: $sm) {
+    .package-row .col {
+        height: 100%;
+    }
+}
+
+.package-title {
+    @extend %headline;
+    padding: 0 16px;
+    margin: 0;
+}
+
+.package-details {
+    font-size: 14px;
+    font-family: $font-tertiary;
+    line-height: 2;
+    letter-spacing: 2px;
+    max-width: 464px;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+
+@media only screen and (min-width: $sm) {
+    .package-title {
+        font-size: 32px;
+    }
+    .package-details {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: $lg) {
+    .package-title {
+        font-size: 72px;
+    }
+    .package-details {
+        font-size: 24px;
+    }
+}
+
+// 1 - Apprentice
+
+.apprentice-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/services/apprentice-bg-min.jpg");
+}
+
+// 2 - Master
+
+.master-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/services/master-bg-min.jpg");
+}
+
+// 3 - Metta
+
+.metta-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/services/metta-bg-min.jpg");
+}

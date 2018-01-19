@@ -1,0 +1,106 @@
+// Wrapper
+
+.about-container {
+    @extend %page-container;
+}
+
+// Header
+
+.about-header {
+    @extend %page-header;
+}
+
+.about-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/about-header-bg-min.jpg");
+    background-position: center 0;
+}
+
+.about-header-title {
+    @extend %headline;
+    font-size: 42px;
+}
+
+@media only screen and (min-width: $sm) {
+    .about-header {
+        height: 480px;
+    }
+    .about-header-title {
+        font-size: 100px;
+    }
+}
+
+// Partners
+
+.partners-header {
+    @extend %page-subheader;
+}
+
+.partners-header-title {
+    @extend %headline;
+}
+
+@media only screen and (min-width: $sm) {
+    .partners-header-title {
+        font-size: 42px;
+    }
+}
+
+// Partners Logo Display
+
+.partners-logo-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 512px;
+    margin: 80px auto;
+}
+
+.partners-logo {
+    width: 100%;
+    margin: 80px 0;
+    padding: 0 16px;
+}
+
+.partners-logo img {
+    width: 100%;
+}
+
+// Connection
+
+.connection {
+    background-color: $darkpurple3;
+    width: 100%;
+    height: 480px;
+}
+
+.connection-bg {
+    background-image: url("/assets/images/connection-bg-min.jpg");
+    background-position: center 0;
+}
+
+.connection-title {
+    @extend %headline;
+    margin: 0;
+    padding: 0 16px;
+}
+
+.connection-body {
+    font-family: $font-tertiary;
+    color: $white;
+    line-height: 2;
+    text-align: center;
+    padding: 0 16px;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: $sm) {
+    .connection-title {
+        font-size: 62px;
+    }
+    .connection-body {
+        font-size: 20px;
+    }
+}

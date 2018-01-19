@@ -18,7 +18,7 @@ export class PageService {
   pageDoc: AngularFirestoreDocument<Page>; 
   pages: Observable<Page[]>;
 
-  constructor( private firestoreService: FirestoreService, public afs: AngularFirestore ) { 
+  constructor( private firestore: FirestoreService, public afs: AngularFirestore ) { 
 
     this.pagesCol = this.afs.collection('pages');
     this.pages = this.pagesCol.snapshotChanges().map(changes => {
@@ -31,7 +31,7 @@ export class PageService {
   }
 
   getPage(id: string) {
-    return this.afs.doc<Page>(`pages/${id}`);
+    return this.firestore.doc$<Page>(`pages/${id}`);
   }
 
   getPages() {

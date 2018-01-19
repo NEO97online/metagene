@@ -19,7 +19,8 @@
     "paths": {
       "@core/*": ["app/core/*"],
       "@shared/*": ["app/shared/*"],
-      "@environments/*": ["environments/*"]
+      "@environments/*": ["environments/*"],
+      "@scss/*": ["scss/*"]
     }
   }
 }

@@ -10,32 +10,29 @@ import 'rxjs/add/operator/switchMap';
 import { Page } from '../page';
 
 import { FirestoreService } from '@core/firestore.service';
+import { PARAMETERS } from '@angular/core/src/util/decorators';
 
 @Component({
   selector: 'app-page-detail',
   templateUrl: './page-detail.component.html',
-  styleUrls: ['./page-detail.component.css']
+  styleUrls: ['./page-detail.component.scss']
 })
 
 export class PageDetailComponent implements OnInit {
 
-  page: Page;
+  page: Observable<Page>;
   pages;
 
  
   constructor(private route: ActivatedRoute,
     private router: Router,
-    private pageService: PageService, private firestoreService: FirestoreService ) { }
+    private pageService: PageService, private firestore: FirestoreService ) { }
 
   ngOnInit() {
 
-    // this.pageService.getPage(this.page.id);
-    // console.log(this.page);
-
-    this.pageService.getPages().subscribe(pages => {
-      this.pages = pages;
-      console.log(this.page);
-    });
+    this.route.params.subscribe(params => {
+      this.page = this.pageService.getPage(params.id);
+    })
   }
 
 }

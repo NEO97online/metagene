@@ -1,0 +1,58 @@
+// Wrapper
+
+.contact-container {
+    @extend %page-container;
+}
+
+// Header
+
+.contact-header {
+    @extend %page-header;
+}
+
+.contact-title {
+    @extend %headline;
+}
+
+.contact-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/contact/contact-bg-min.jpg");
+    background-position: center 0;
+}
+
+@media only screen and (min-width: $sm) {
+    .contact-header {
+        height: 480px;
+    }
+    .contact-title {
+        font-size: 100px;
+    }
+}
+
+.contact-p {
+    font-size: 20px;
+    text-align: center;
+}
+
+@media only screen and (min-width: $sm) {
+    .contact-p {
+        text-align: left;
+        font-size: 28px;
+    }
+}
+
+// Social
+
+.contact-social {
+    max-width: 300px;
+    margin-bottom: 42px;
+}
+
+.contact-social-link {
+    padding: 0 24px;
+}
+
+.contact-social-link i {
+    color: $cyan3;
+    font-size: 42px;
+}

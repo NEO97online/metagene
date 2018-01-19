@@ -1,8 +1,12 @@
 <navigation></navigation>
 <div id="main-container" class="main-container">
 
-  <div [@routerTransition]="getState(o)">
+  <!-- <div [@routerTransition]="getState(o)"> -->
       <router-outlet #o="outlet"></router-outlet>
-  </div>
-  
+  <!-- </div> -->
+  <div class="footer">
+    <div class="row fill center-xs middle-xs">
+      <p class="footer-body">COPYRIGHT 2018 | ALL RIGHTS RESERVED</p>
+    </div>
+  </div>  
 </div>

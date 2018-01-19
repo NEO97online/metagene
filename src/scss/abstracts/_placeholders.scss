@@ -1,0 +1,92 @@
+// General
+
+%page-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+}
+
+%page-header {
+    width: 100%;
+    height: 232px;
+    background-color: $purple1;
+    transition: all 200ms ease;
+}
+
+%page-subheader {
+    width: 100%;
+    height: 232px;
+    background-color: $darkpurple3;
+}
+
+%bg-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+// Typography
+
+%headline {
+    font-family: $font-primary;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white;
+    letter-spacing: 6px;
+    text-align: center;
+    font-size: 24px;
+}
+
+%subheading {
+    font-family: $font-secondary;
+    color: $white;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 300;
+}
+
+%title2 {
+    font-family: $font-tertiary;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: $purple3;
+    line-height: 1.5;
+}
+
+%title {
+    font-family: $font-primary;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: $pink;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+}
+
+%body2 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-family: $font-secondary;
+    color: $white;
+    line-height: 1.5;
+    max-width: 464px;
+    text-align: center;
+}
+
+%body {
+    color: #3b3b3b;
+    font-size: 14px;
+    line-height: 1.8;
+    font-family: $font-tertiary;
+    padding: 24px 0;
+}
+
+%bodycontainer {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}

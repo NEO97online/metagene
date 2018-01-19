@@ -1,0 +1,45 @@
+// Buttons
+
+.button {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-family: $font-secondary;
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 16px 48px;
+    border: 2px solid #fff;
+    transition: all 200ms ease;
+
+    &:hover {
+        color: $darkpurple3;
+        background-color: $white;
+    }
+}
+
+.submit-button {
+    color: $purple1;
+    background-color: transparent;
+    padding: 16px 80px;
+    border-color: $purple1;
+
+    &:hover {
+        color: $white;
+        background-color: $purple1;
+    }
+}
+
+.action {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+@media only screen and (min-width: $lg) {
+    .button {
+        font-size: 16px;
+        padding: 16px 48px;
+    }
+}

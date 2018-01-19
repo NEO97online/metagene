@@ -1,0 +1,92 @@
+// Wrapper
+
+.alkeme-container {
+    @extend %page-container;
+}
+
+// Header
+
+.alkeme-header {
+    @extend %page-header;
+  }
+  
+.alkeme-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/alkeme/alkeme-bg-min.jpg");
+    background-position: center 0;
+}
+
+.alkeme-header-title {
+    @extend %headline;
+    font-size: 42px;
+    text-transform: none;
+}
+
+@media only screen and (min-width: $sm) {
+    .alkeme-header {
+        height: 480px;
+    }
+    .alkeme-header-title {
+        font-size: 100px;
+    }
+}
+
+// Events
+
+.events-header {
+    @extend %page-subheader;
+}
+
+.events-header-title {
+    @extend %headline;
+}
+
+@media only screen and (min-width: $sm) {
+    .events-header-title {
+        font-size: 42px;
+    }
+}
+
+.event-row {
+    height: 480px;
+    margin: 64px 0;
+    
+    .col {
+        height: 50%;
+    }
+
+    .padding {
+        padding: 0 16px;
+    }
+}
+
+@media only screen and (min-width: $sm) {
+    .event-row .col {
+        height: 100%;
+    }
+    .event-row .padding {
+        padding-left: 80px;
+    }
+}
+
+.event-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/alkeme/event-bg-min.jpg");
+}
+
+.event-details {
+    align-items: flex-start;
+}
+
+.event-details-p {
+    @extend %body;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+@media only screen and (min-width: $sm) {
+    .event-details-p {
+        font-size: 24px;
+    }
+}

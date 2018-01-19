@@ -1,0 +1,65 @@
+// Colors
+
+$white: #fff;
+
+$pink: #da5b93;
+
+$darkpurple1: #1f0828; 
+$darkpurple2: #300941;
+$darkpurple3: #3c2556;
+$purple1: #6b4d8f;
+$purple2: #7c65ae;
+$purple3: #7b65ad;
+
+$cyan1: #38a9b3;
+$cyan2: #48bdc7;
+$cyan3: #5bd0da;
+
+$darkgrey: #3b3b3b;
+$grey: #b0b2b3;
+
+$font-primary-color: $darkgrey;
+$font-secondary-color: $purple3;
+$font-tertiary-color: $pink;
+
+$font-form-color: $darkgrey;
+$font-form-placeholder-color: $grey;
+
+$link-primary: $darkpurple2;
+$link-secondary: $cyan3;
+
+$border-primary-color: $white;
+$border-secondary-color: $grey;
+
+// Fonts
+
+$font-primary: 'Sansation';
+$font-secondary: 'Gill Sans';
+$font-tertiary: 'Avenir';
+
+// Viewports
+
+$sm: 48em;
+$med: 64em;
+$lg: 75em;
+$xl: 88em;
+
+// Containers
+
+$sm-container: 49rem;
+$med-container: 65rem;
+$lg-container: 76rem;
+$xl-container: 89rem;
+
+// Gutters
+
+$gutter: 0.5rem;
+$margin: auto;
+$margin1: -$gutter;
+
+$sm-gutter-right: $gutter;
+$sm-gutter-left: $gutter;
+$med-gutter-right: $gutter;
+$med-gutter-left: $gutter;
+$lg-gutter-right: $gutter;
+$lg-gutter-left: $gutter;

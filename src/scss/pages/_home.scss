@@ -1,0 +1,508 @@
+// Wrapper
+
+.home-container {
+    @extend %page-container;
+}
+
+// Hero
+
+.hero {
+    width: 100%;
+    height: 480px;
+    background-color: $purple1;
+    transition: all 200ms ease;
+}
+
+.hero-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/home/home-header-bg-min.jpg");
+}
+
+.hero-headline {
+    @extend %headline;
+    margin: 160px 0 0 0;
+}
+
+.hero-subheading {
+    @extend %subheading;
+    margin: 12px 0 0 0;
+}
+
+@media only screen and (min-width: $lg) {
+    .hero {
+        height: 664px;
+    }
+    .hero-headline {
+        font-size: 60px;
+    }
+    .hero-subheading {
+        font-size: 30px;
+    }
+    .hero-action {
+        margin: 64px 0;
+    }
+}
+
+// E-Book
+
+.ebook {
+    background-color: $cyan3;
+    width: 100%;
+    height: 336px;
+    transition: all 200ms ease;
+}
+
+.ebook-headline {
+    @extend %subheading;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.ebook-subheading {
+    @extend %subheading;
+    letter-spacing: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    max-width: 800px;
+    margin: 0;
+}
+
+.ebook-button {
+    padding: 16px;
+}
+
+@media only screen and (min-width: $lg) {
+    .ebook {
+        height: 336px;
+    }
+    .ebook-headline {
+        font-size: 20px;
+    }
+    .ebook-subheading {
+        font-size: 32px;
+    }
+}
+
+// Metagene Health
+
+.metahealth {
+    width: 100%;
+    height: 480px;
+    background-color: $purple1;
+    transition: all 200ms ease;
+}
+
+.metahealth-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/home/metahealth-bg-min.jpg");
+}
+
+.metahealth-left, .metahealth-right {
+    height: 50%;
+}
+
+.metahealth-left {
+    padding: 0 12px;
+}
+
+.metahealth-title {
+    @extend %title;
+}
+
+.metahealth-body {
+    @extend %body2;
+}
+
+@media only screen and (min-width: $sm) {
+    .metahealth-left, .metahealth-right {
+        height: 100%;
+    }
+    .metahealth-left {
+        padding-left: 24px;
+    }
+    .metahealth-title, .metahealth-body {
+        text-align: left;
+    }
+    .metahealth-title {
+        font-size: 24px;
+    }
+    .metahealth-body {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: $med) {
+    .metahealth-left {
+        padding: 64px;
+    }
+}
+
+@media only screen and (min-width: $lg) {
+    .metahealth-left {
+        padding-left: 5%;
+    }
+    .metahealth-title {
+        font-size: 32px;
+    }
+    .metahealth-body {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: $xl) {
+    .metahealth-left {
+        padding-left: 10%;
+    }
+}
+
+// Home Services
+
+.home-services-row {
+    width: 100%;
+    height: 600px;
+    background-color: $purple1;
+    transition: all 200ms ease;
+    
+    .col {
+        height: 50%;
+    }
+
+    .padding {
+        padding: 0 16px;
+    }
+}
+
+.home-services-body {
+    @extend %body2;
+    text-align: left;
+}
+
+.home-services-action {
+    max-width: 464px;
+}
+
+@media only screen and (min-width: $sm) {
+    .home-services-row .col {
+        height: 100%;
+    }
+    .home-services-action {
+        justify-content: flex-start;
+    }
+    .home-services-body {
+        font-size: 16px;
+    }
+    .home-services-row .padding {
+        padding: 0 64px;
+    }
+}
+
+@media only screen and (min-width: $med) {
+    .home-services-row .padding {
+        padding: 0 80px;
+    }
+}
+
+@media only screen and (min-width: $lg) {
+    .home-services-row .padding {
+        padding: 0 120px;
+    }
+    .home-services-body {
+        font-size: 24px;
+    }
+}
+
+// 1 - Header
+
+.home-services-header {
+    background-color: $darkpurple3;
+    width: 100%;
+    height: 232px;
+}
+
+.home-services-headline {
+    @extend %headline;
+}
+
+@media only screen and (min-width: $lg) {
+    .home-services-headline {
+        font-size: 42px;
+    }
+}
+
+// 2 - Reiki
+
+.reiki-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/home/reiki-bg-min.jpg");
+}
+
+.reiki-headline {
+    @extend %headline;
+    font-size: 42px;
+    letter-spacing: 16px;
+}
+
+@media only screen and (min-width: $sm) {
+    .reiki-headline {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (min-width: $lg) {
+    .reiki-headline {
+        font-size: 100px;
+    }
+}
+
+// 3 - Theta Healing
+
+.theta-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/home/theta-bg-min.jpg");
+}
+
+.theta-headline {
+    @extend %headline;
+    font-size: 24px;
+    letter-spacing: 16px;
+}
+
+@media only screen and (min-width: $sm) {
+    .theta-headline {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (min-width: $lg) {
+    .theta-headline {
+        font-size: 72px;
+    }
+}
+
+// 4 - Distance Healing
+
+.distance-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/home/distance-bg-min.jpg");
+}
+
+.distance-headline {
+    @extend %headline;
+    font-size: 24px;
+    letter-spacing: 16px;
+}
+
+@media only screen and (min-width: $sm) {
+    .distance-headline {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (min-width: $lg) {
+    .distance-headline {
+        font-size: 72px;
+    }
+}
+
+// 5 - Meta Sessions
+
+.sessions-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/home/sessions-bg-min.jpg");
+}
+
+.sessions-headline {
+    @extend %headline;
+    font-size: 24px;
+    letter-spacing: 16px;
+}
+
+@media only screen and (min-width: $sm) {
+    .sessions-headline {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (min-width: $lg) {
+    .sessions-headline {
+        font-size: 72px;
+    }
+}
+
+// 6 - Essential Oils
+
+.oils-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/home/oils-bg-min.jpg");
+}
+
+.oils-headline {
+    @extend %headline;
+    font-size: 24px;
+    letter-spacing: 16px;
+}
+
+@media only screen and (min-width: $sm) {
+    .oils-headline {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (min-width: $lg) {
+    .oils-headline {
+        font-size: 72px;
+    }
+}
+
+
+// Events
+
+.events {
+    width: 100%;
+    height: 336px;
+    transition: all 200ms ease;
+}
+
+.events-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/home/events-bg-min.jpg");
+}
+
+.events-headline {
+    @extend %headline;
+    margin: 0;
+}
+
+.events-subheading {
+    @extend %subheading;
+    font-size: 18px;
+    margin: 0;
+}
+
+@media only screen and (min-width: $sm) {
+    .events-headline {
+        font-size: 42px;
+    }
+    .events-subheading {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: $lg) {
+    .events-headline {
+        font-size: 100px;
+    }
+    .events-subheading {
+        font-size: 40px;
+    }
+    .events {
+        height: 600px;
+    }
+    .events-action {
+        margin: 64px 0;
+    }
+}
+
+// Social
+
+.social {
+    width: 100%;
+    height: 120px;
+    background-color: $cyan3;
+
+    .instagram {
+        background-color: $cyan3;
+    }
+
+    .facebook {
+        background-color: $cyan2;
+    }
+
+    .youtube {
+        background-color: $cyan1;
+    }
+}
+
+.social-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        font-size: 64px;
+        color: $white;
+        transition: all 200ms ease;
+    }
+
+    &:hover i {
+        transform: scale(1.5);
+    }
+}
+
+@media only screen and (min-width: $sm) {
+    .social {
+        height: 180px;
+    }
+    .social-link i {
+        font-size: 80px;
+    }
+}
+
+@media only screen and (min-width: $lg) {
+    .social {
+        height: 300px;
+    }
+    .social-link i {
+        font-size: 164px;
+    }
+}
+
+// Question
+
+.question {
+    width: 100%;
+    height: 300px;
+    transition: all 200ms ease;
+}
+
+.question-bg {
+    @extend %bg-image;
+    background-image: url("/assets/images/home/question-bg-min.jpg");
+}
+
+.question-headline {
+    @extend %headline;
+    margin: 0;
+}
+
+.question-subheading {
+    @extend %subheading;
+    margin: 0;
+    font-size: 18px;
+}
+
+@media only screen and (min-width: $sm) {
+    .question-headline {
+        font-size: 42px;
+    }
+    .question-subheading {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: $lg) {
+    .question-headline {
+        font-size: 100px;
+    }
+    .question-subheading {
+        font-size: 40px;
+    }
+    .question {
+        height: 600px;
+    }
+    .question-action {
+        margin: 64px 0;
+    }
+}
