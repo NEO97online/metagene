@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FirestoreService } from '@core/firestore.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  firstName: string;
+  email: string;
+  message: string;
+
+  constructor(private router: Router, private firestore: FirestoreService) { }
 
   ngOnInit() {
+  }
+
+  submit() {
+    this.firestore.add('contactForms', {
+      firstName: this.firstName,
+      email: this.email,
+      message: this.message
+    });
+    window.alert('Thank you for submitting!');
+    this.router.navigate(['/home']);
   }
 
 }

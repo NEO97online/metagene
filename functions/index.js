@@ -1,21 +1,28 @@
+'use strict';
 const functions = require('firebase-functions');
-const MailChimpAPI = require('mailchimp').MailChimpAPI;
-const apiKey = '5805ec6df0c7c933e9314d53ab6325d5-us17';
-try {
-  const chimp = new MailChimpAPI(apiKey, { version: '3.0' });
-} catch (error) {
-  console.log(error.message);
-}
+const nodemailer = require('nodemailer');
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
-exports.sendEbook = functions.firestore
-  .document('emails/{emailId}')
+const contactEmail = 'audererm@gmail.com';
+
+const transport = nodemailer.createTransport({
+  service: 'gmail',
+  auth: require('./auth')
+})
+
+exports.submitContactForm = functions.firestore
+  .document('contactForms/{contactForm}')
   .onCreate(event => {
     const data = event.data.data();
+    const firstName = data.firstName;
     const email = data.email;
+    const message = data.message;
+    const mailOptions = {
+      from: '"Metagene Notifications" <metagenenotifications@gmail.com>',
+      to: contactEmail,
+      subject: 'New contact form submission on Metagene',
+      text: `A user has submitted a new contact form!\n\nFirst Name: ${firstName}\nEmail: ${email}\nMessage: ${message}`
+    };
+    return transport.sendMail(mailOptions)
+      .then(_ => console.log(`Successfully sent email to ${contactEmail}`))
+      .catch(err => console.error(`There was an error while sending the email:`, err));
   });

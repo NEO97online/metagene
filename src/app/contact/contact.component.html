@@ -33,11 +33,11 @@
         </div>
       </div>
     </div>
-    <input type="text" name="firstName" placeholder="First Name">
-    <input type="text" name="email" placeholder="Email Address">
-    <textarea rows="10" type="text" name="message" placeholder="Message..."></textarea>
+    <input [(ngModel)]="firstName" type="text" name="firstName" placeholder="First Name">
+    <input [(ngModel)]="email" type="text" name="email" placeholder="Email Address">
+    <textarea [(ngModel)]="message" rows="10" type="text" name="message" placeholder="Message..."></textarea>
     <div class="form-action">
-        <a href="" class="submit">Submit</a>
+        <a (click)="submit()" class="submit">Submit</a>
     </div>
     
 
