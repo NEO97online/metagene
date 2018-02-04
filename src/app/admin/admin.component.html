@@ -1,0 +1,20 @@
+<div style="height: 80px"></div>
+
+<div class="admin-container__outer">
+  <div class="admin-container__inner">
+
+    <div class="sidebar">
+      <div class="sidebar-link" routerLink="/admin/posts">
+        View Posts
+      </div>
+      <div class="sidebar-link" (click)="addNew()">
+        + Add New
+      </div>
+    </div>
+  
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,15 @@
+button {
+  width: 12%;
+  height: 48px;
+  font-family: 'Roboto Mono', monospace;
+  background-color: rgb(115, 250, 255);
+  border: 0;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    background-color: #eee;
+  }
+}

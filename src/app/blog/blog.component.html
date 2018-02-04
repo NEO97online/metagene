@@ -1,0 +1,36 @@
+<div class="blog-container">
+  <div class="blog-header">
+    <div class="row fill">
+      <div class="blog-bg col col-xs-12 middle-xs center-xs">
+        <h1 class="blog-headline">META DATA</h1>
+      </div>
+    </div>
+  </div>
+  <div class="body-container">
+    <div *ngIf="!(posts | async)" class="loading">
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <ng-container *ngFor="let post of posts | async">
+      <div class="blog-post__container col col-sm-4">
+        <div class="blog-post__body">
+          <div class="blog-post__cover" [ngStyle]="{ background: 'url(' + post.coverPhotoUrl + ')' }">
+            <img [src]="post.coverPhotoUrl">
+          </div>
+          <div class="blog-post__content">
+            <span class="blog-post__title">{{ post.title }}</span>
+            <p class="blog-post__content-body">
+              {{ post.body?.substring(0, 100) + '...' }}
+            </p>
+            <br>
+            <button class="read-more" [routerLink]="'/blog/' + post.id">Read More</button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

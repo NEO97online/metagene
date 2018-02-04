@@ -14,11 +14,13 @@
     ],
     "headers": [
       {
-        "source" : "**/*.@(ico|js|css|jpg|jpeg|gif|png)",
-        "headers" : [ {
-          "key" : "Cache-Control",
-          "value" : "max-age=30672000"
-        } ]
+        "source": "**/*.@(ico|js|css|jpg|jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=30672000"
+          }
+        ]
       }
     ]
   }

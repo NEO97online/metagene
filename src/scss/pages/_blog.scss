@@ -1,0 +1,21 @@
+// Wrapper
+
+.blog-container {
+  @extend %page-container;
+}
+
+// Header
+
+.blog-header {
+  @extend %page-header;
+}
+
+.blog-bg {
+  @extend %bg-image;
+  background-image: url("/assets/images/connection-bg-min.jpg");
+}
+
+.blog-headline {
+  @extend %headline;
+  font-size: 42px;
+}

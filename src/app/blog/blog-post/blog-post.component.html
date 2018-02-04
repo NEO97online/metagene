@@ -1,0 +1,30 @@
+<div class="blog-container">
+  <div class="blog-header">
+    <div class="row fill">
+      <div class="blog-bg col col-xs-12 middle-xs center-xs">
+        <h1 class="blog-headline">META DATA</h1>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!(data | async)" class="loading">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div *ngIf="data | async as postData" class="post-container">
+    <h1 style="font-family: Roboto">{{ postData.title }}</h1>
+    <img [src]="postData.coverPhotoUrl" style="max-height:300px;">
+    <br>
+    <p class="post-body">{{ postData.body }}</p>
+    <br>
+    <br>
+    <button class="read-more" routerLink="/blog">Back to Meta Data</button>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>

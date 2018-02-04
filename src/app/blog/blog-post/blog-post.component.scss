@@ -1,0 +1,33 @@
+.post-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.post-body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.read-more {
+  background-color: #7b65af;
+  border: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  &:hover {
+    transform: scale(1.04);
+    background-color: #b1a1d4;
+  }
+}
+
+.loading {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
