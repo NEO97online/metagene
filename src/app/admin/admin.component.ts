@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from '@core/firestore.service';
 import { Router } from '@angular/router';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 declare let CKEDITOR;
 
@@ -11,16 +12,14 @@ declare let CKEDITOR;
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private router: Router, private firestore: FirestoreService) { }
+  constructor(private router: Router, private firestore: AngularFirestore) { }
 
   ngOnInit() {
   }
 
   addNew() {
-    this.firestore.add('posts', {title: 'untitled'}).then(ref => {
-      console.log(ref.id);
-      this.router.navigate([`/admin/edit/${ref.id}`]);
-    });
+    const id = this.firestore.collection('posts').ref.doc().id;
+    this.router.navigate([`/admin/edit/${id}`]);
   }
 
 }

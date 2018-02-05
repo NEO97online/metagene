@@ -1,6 +1,17 @@
-<table class="table responsive-table">
-  <tr>
-    <td>Hello</td>
-    <td>hello again</td>
-  </tr>
-</table>
+<div *ngIf="loading" class="loading">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<div class="post" *ngFor="let post of posts | async">
+  <div>{{ post.title }}</div>
+  <div class="buttons">
+    <button routerLink="/blog/{{post.id}}" class="view">View</button>
+    <button (click)="edit(post.id)">Edit</button>
+    <button class="delete" (click)="delete(post.id)">Delete</button>
+  </div>
+</div>

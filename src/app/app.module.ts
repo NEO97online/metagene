@@ -20,6 +20,7 @@ import { EbookDialogComponent } from './ebook-dialog/ebook-dialog.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminPostsComponent } from './admin/posts/posts.component';
 import { AdminCreateComponent } from './admin/create/create.component';
+import { SafeHtml } from './core/safe-html.pipe';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { AdminCreateComponent } from './admin/create/create.component';
     AdminComponent,
     AdminPostsComponent,
     AdminCreateComponent,
+    SafeHtml
   ],
   imports: [
     BrowserModule,

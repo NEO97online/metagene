@@ -15,7 +15,7 @@ export class BlogComponent implements OnInit {
   constructor(private firestore: FirestoreService) { }
 
   ngOnInit() {
-    this.posts = this.firestore.colWithIds$('posts', ref => ref.orderBy('createdAt'));
+    this.posts = this.firestore.colWithIds$('posts', ref => ref.where('published', '==', true).orderBy('createdAt'));
   }
 
 }

@@ -2,14 +2,27 @@ button {
   width: 12%;
   height: 48px;
   font-family: 'Roboto Mono', monospace;
-  background-color: rgb(115, 250, 255);
+  background-color: #6b4d8f;
+  color: white;
   border: 0;
-  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
   cursor: pointer;
   &:hover {
-    background-color: #eee;
+    background-color: #8b71aa;
   }
+}
+
+.file-upload-container {
+  margin-bottom: 16px;
+}
+
+.loading {
+  height: 256px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

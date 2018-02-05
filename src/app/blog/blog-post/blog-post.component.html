@@ -18,7 +18,7 @@
     <h1 style="font-family: Roboto">{{ postData.title }}</h1>
     <img [src]="postData.coverPhotoUrl" style="max-height:300px;">
     <br>
-    <p class="post-body">{{ postData.body }}</p>
+    <div class="post-body" [innerHTML]="postData.body | safeHtml"></div>
     <br>
     <br>
     <button class="read-more" routerLink="/blog">Back to Meta Data</button>
