@@ -12,7 +12,9 @@ import { BlogComponent } from 'app/blog/blog.component';
 import { BlogPostComponent } from 'app/blog/blog-post/blog-post.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminPostsComponent } from 'app/admin/posts/posts.component';
-import { AdminCreateComponent } from 'app/admin/create/create.component';
+import { AdminEditComponent } from 'app/admin/edit/edit.component';
+import { AuthGuard } from '@core/auth.guard';
+import { LoginComponent } from 'app/login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, data: { state: 'home' } },
@@ -22,13 +24,16 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent, data: { state: 'contact' } },
   { path: 'blog', component: BlogComponent, data: { state: 'blog' } },
   { path: 'blog/:postId', component: BlogPostComponent, data: { state: 'blog' } },
-  { path: 'admin', component: AdminComponent, data: { state: 'admin' },
+  { path: 'login', component: LoginComponent, data: { state: 'login' } },
+  {
+    path: 'admin', component: AdminComponent, data: { state: 'admin' }, canActivate: [AuthGuard],
     children: [
       { path: '', redirectTo: 'posts', pathMatch: 'full' },
       { path: 'posts', component: AdminPostsComponent },
-      { path: 'edit/:postId', component: AdminCreateComponent },
+      { path: 'edit/:postId', component: AdminEditComponent },
       { path: '**', redirectTo: 'posts', pathMatch: 'full' },
-    ] },
+    ]
+  },
   { path: '**', component: HomeComponent, data: { state: 'home' } },
 ];
 
@@ -37,7 +42,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forRoot(routes)
   ],
-  exports: [ RouterModule ],
+  exports: [RouterModule],
   declarations: []
 })
 export class AppRoutingModule { }

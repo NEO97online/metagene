@@ -10,8 +10,8 @@
 <div class="post" *ngFor="let post of posts | async">
   <div>{{ post.title }}</div>
   <div class="buttons">
-    <button routerLink="/blog/{{post.id}}" class="view">View</button>
-    <button (click)="edit(post.id)">Edit</button>
-    <button class="delete" (click)="delete(post.id)">Delete</button>
+    <a class="butto view" href="/blog/{{post.id}}" target="_blank">View</a>
+    <button class="butto" (click)="edit(post.id)">Edit</button>
+    <button class="butto delete" (click)="delete(post.id)">Delete</button>
   </div>
 </div>

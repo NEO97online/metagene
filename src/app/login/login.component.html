@@ -1,0 +1,22 @@
+<div class="alkeme-container">
+  <div class="alkeme-header">
+    <div class="row fill">
+      <div class="col col-xs-12 middle-xs center-xs alkeme-bg">
+        <h1 class="alkeme-header-title">Admin Login</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="login-container">
+    <div class="card col col-xs-12 col-sm-10 col-md-8 col-lg-6">
+      <label for="username">Username:
+      </label>
+      <input #user id="username" name="username" class="form-control">
+      <label for="password">Password:
+      </label>
+      <input #pass id="password" name="password" type="password" class="form-control">
+      <button class="btn" (click)="login(user.value, pass.value)">Log In</button>
+    </div>
+  </div>
+
+</div>

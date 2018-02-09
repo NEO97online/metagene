@@ -8,11 +8,11 @@ import { StorageService } from '@core/storage.service';
 declare let CKEDITOR;
 
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.scss']
+  selector: 'app-edit',
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.scss']
 })
-export class AdminCreateComponent implements OnInit {
+export class AdminEditComponent implements OnInit {
 
   post: Observable<any>;
   postId: string;

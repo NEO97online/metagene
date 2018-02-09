@@ -19,8 +19,10 @@ import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 import { EbookDialogComponent } from './ebook-dialog/ebook-dialog.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminPostsComponent } from './admin/posts/posts.component';
-import { AdminCreateComponent } from './admin/create/create.component';
+import { AdminEditComponent } from './admin/edit/edit.component';
 import { SafeHtml } from './core/safe-html.pipe';
+import { AuthGuard } from '@core/auth.guard';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -37,8 +39,9 @@ import { SafeHtml } from './core/safe-html.pipe';
     EbookDialogComponent,
     AdminComponent,
     AdminPostsComponent,
-    AdminCreateComponent,
-    SafeHtml
+    AdminEditComponent,
+    SafeHtml,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,7 @@ import { SafeHtml } from './core/safe-html.pipe';
     CoreModule,
     FormsModule,
   ],
-  providers: [ ],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

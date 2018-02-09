@@ -2,7 +2,7 @@
 const functions = require('firebase-functions');
 const nodemailer = require('nodemailer');
 
-const contactEmail = 'audererm@gmail.com';
+const contactEmail = 'johnny@metagenehealth.com';
 
 const transport = nodemailer.createTransport({
   service: 'gmail',

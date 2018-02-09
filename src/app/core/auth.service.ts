@@ -24,7 +24,7 @@ export class AuthService {
     this.user = this.afAuth.authState
       .switchMap(user => {
         if (user) {
-          return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
+          return Observable.of(true);
         } else {
           return Observable.of(null);
         }
@@ -46,13 +46,7 @@ export class AuthService {
 
   emailLogin(email: string, password: string) {
     console.log(password);
-    return this.afAuth.auth.signInWithEmailAndPassword(email, password)
-      .then((user) => {
-        // this.notify.update('Welcome to Firestarter!!!', 'success')
-        this.router.navigate(['/dashboard']);
-        // return this.updateUserData(user); // if using firestore
-      })
-      .catch((error) => this.handleError(error) );
+    return this.afAuth.auth.signInWithEmailAndPassword(email, password);
   }
 
   signOut() {

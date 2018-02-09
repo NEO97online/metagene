@@ -14,14 +14,17 @@
       <div></div>
     </div>
   </div>
-  <div *ngIf="data | async as postData" class="post-container">
-    <h1 style="font-family: Roboto">{{ postData.title }}</h1>
-    <img [src]="postData.coverPhotoUrl" style="max-height:300px;">
-    <br>
-    <div class="post-body" [innerHTML]="postData.body | safeHtml"></div>
-    <br>
+  <div class="post-container">
     <br>
     <button class="read-more" routerLink="/blog">Back to Meta Data</button>
+    <ng-container *ngIf="(data | async) || {} as postData">
+      <h1 style="font-family: Roboto">{{ postData.title }}</h1>
+      <img [src]="postData.coverPhotoUrl" style="max-height:300px;">
+      <br>
+      <div class="post-body" [innerHTML]="postData.body | safeHtml"></div>
+    </ng-container>
+    <br>
+    <br>
     <br>
     <br>
     <br>
